@@ -1,7 +1,8 @@
 #!/usr/bin/node
 import redis from 'redis';
-// 
 
+
+//* Default Connection Behavior 'redis://localhost:6379'
 const client = redis.createClient({url: 'redis://localhost:6379'});
 
 client.on('error', (err) => {
@@ -11,5 +12,3 @@ client.on('error', (err) => {
 client.on('connect', () => {
     console.log('Redis client connected to the server');
 });
-
-client.connect();
