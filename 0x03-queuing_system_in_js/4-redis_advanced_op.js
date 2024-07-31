@@ -1,4 +1,4 @@
-#!/usr/bin/yarn dev
+#!/usr/bin/node
 import redis from 'redis';
 
 const client = redis.createClient();
